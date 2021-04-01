@@ -1,5 +1,7 @@
 # Information
 ___
+[Back to README.md](README.md)
+___
 
 [Git](#git)
 
@@ -20,8 +22,6 @@ This project uses branches on git.
 
 ###### Why do we use branches?
 We use branches to avoid git conflicts and to avoid commiting unfinished files and content into the master branch.  
-
-Currently we have 4 branches. 
 
 - **master** - The main and final branch. Once a feature has been implemented with no compile errors then it should be commited to the master branch.
 
