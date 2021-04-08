@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">projectIPP</string>
+    <string name="welcome">Welcome to AutoIn Health</string>
+    <string name="Status">Check status</string>
+    <string name="Connect">Connect to bluetooth</string>
+    <string name="Timer">Check Timer</string>
+    <string name="dateForChange">Scheduled replacement date</string>
+    <string name="estimate">The insulin pump is estimated to need a replacement in 4 days from now </string>
+    <string name="remind1">Remind me </string>
+    <string name="remind2">prior to the date of change</string>
+    <string name="two">2</string>
+    <string name="days">days</string>
+    <string name="one">1</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="hours">hours</string>
+    <string name="weeks">weeks</string>
+    <string name="minutes">minutes</string>
+</resources>
