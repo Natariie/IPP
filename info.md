@@ -100,7 +100,7 @@ git cherry-pick <A>;
 
 **How to pull from another branch to current branch.**
 ```
-git pull https://gitlab.com/natariie/gomcinematics.git <branchNameToPullFrom>
+git pull https://github.com/Natariie/IPP.git <branchNameToPullFrom>
 ```
 ___
 
