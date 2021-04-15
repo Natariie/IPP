@@ -7,9 +7,6 @@ ___
 
 - [How to download the project by using Git SCM](#How-to-download-the-project-by-using-Git-SCM)
 
-- [Git Commands](#git-commands)
-
-
 ___
 ### Link to info
 
