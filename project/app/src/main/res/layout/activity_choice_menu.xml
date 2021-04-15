@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChoiceMenu"
+    android:background="@drawable/choice_menu_background">
+
+
+    <TextView
+        android:id="@+id/choice_menu_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="@string/choice_menu_question"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_connect_to_bluetooth"
+        android:layout_width="288dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_corners_button"
+        android:text="@string/button_connect_to_bluetooth"
+        android:textColor="#14171C"
+        app:backgroundTint="#07BBBB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice_menu_question" />
+
+    <Button
+        android:id="@+id/button_check_status"
+        android:layout_width="288dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corners_button"
+        android:text="@string/button_check_status"
+        android:textColor="#14171C"
+        app:backgroundTint="#07BBBB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_connect_to_bluetooth" />
+
+    <Button
+        android:id="@+id/button_check_timer"
+        android:layout_width="288dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corners_button"
+        android:text="@string/button_check_timer"
+        android:textColor="#14171C"
+        app:backgroundTint="#07BBBB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_check_status" />
+
+    <Button
+        android:id="@+id/button_help"
+        android:layout_width="288dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corners_button"
+        android:text="@string/button_help"
+        android:textColor="#14171C"
+        app:backgroundTint="#07BBBB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_check_timer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
