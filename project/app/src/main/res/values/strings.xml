@@ -1,4 +1,5 @@
 <resources>
+    <!-- Main (start menu) -->
     <string name="app_name">IPP</string>
 
     <string name="Welcome">Welcome!</string>
@@ -6,9 +7,14 @@
     <string name="main_summary">Let us get you started to control your pump.</string>
     <string name="button_start">Start</string>
 
+
+    <!-- Choice menu -->
+    <string name="choice_menu_question">What would you like to do?</string>
+
     <string name="button_connect_to_bluetooth">Connect to Bluetooth</string>
     <string name="button_check_status">Check status</string>
     <string name="button_check_timer">Check timer</string>
     <string name="button_help">Help</string>
     <string name="button_settings">Settings</string>
+
 </resources>
