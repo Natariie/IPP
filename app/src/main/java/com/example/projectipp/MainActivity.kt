@@ -47,8 +47,8 @@ open class MainActivity : AppCompatActivity() {
     open fun startTimer(key1: String?, key2: String?){
 
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Time for a change!")
-        builder.setMessage("This is a reminder that you need to replace your insulin pump.")
+        builder.setTitle("Refill")
+        builder.setMessage("This is a reminder that you need to refill your glucose and insulin.")
 
         when(key1){
             "1" -> {
