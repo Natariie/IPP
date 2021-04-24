@@ -2,14 +2,19 @@ package com.example.ipp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var buttonStart : Button
+    private lateinit var buttonBluetooth : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         // Used YT video as helping source for switching fragment https://youtu.be/Nj4H4Xg4rjE
         buttonStart = findViewById(R.id.button_start)
@@ -23,6 +28,8 @@ class MainActivity : AppCompatActivity() {
             transaction.addToBackStack(null).commit()
         }
     }
+
+
 }
 
 // Classic Bluetooh (not Low Energy Bluetooth)
