@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    // this is supposed to be a test code and is slightly modified from the source code
+    // The source code was made by Apptaura and here is the YT video for his code
+    // Part 1: https://www.youtube.com/watch?v=Oz4CBHrxMMs
+    // Part 2: https://www.youtube.com/watch?v=eg-t_rhDSoM
+    // Here is the source code on his gitHub: https://github.com/appsinthesky/Kotlin-Bluetooth
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityBluetoothControl">
+
+    <Button
+        android:id="@+id/control_led_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="on"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/control_led_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="off"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/control_led_on"/>
+    <Button
+        android:id="@+id/control_led_disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="disconnect"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/control_led_off"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
