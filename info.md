@@ -63,6 +63,12 @@ git reset --hard origin/<branchName>;
 git clean -fd;
 ```
 
+**Undo pushed commit**
+```
+git reset --hard <commit hash>
+git push --force
+```
+
 **Create new branch.**
 ```
 git checkout -b <branchName>;
