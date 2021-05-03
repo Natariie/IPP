@@ -5,26 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:id="@+id/id_fragment_bluetooth"
     tools:context=".fragmentBluetooth">
 
 
     <ListView
-        android:id="@+id/select_device_list"
+        android:id="@+id/device_list"
         android:layout_width="wrap_content"
-        android:layout_height="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="104dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/button_show_devices"
+        tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_Search"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Refresh"
+        android:text="Search for Devices"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_show_devices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Show Devices"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Search" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

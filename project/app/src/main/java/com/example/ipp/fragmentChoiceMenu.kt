@@ -30,11 +30,7 @@ class FragmentChoiceMenu : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
-
-        
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,7 +55,6 @@ class FragmentChoiceMenu : Fragment() {
         buttonStatus.setOnClickListener() {
             Log.d("tagged", "clickStatus")
         }
-
 
         // Inflate the layout for this fragment
         return inflateLayout
