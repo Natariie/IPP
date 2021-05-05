@@ -34,7 +34,7 @@
         android:id="@+id/button_show_devices"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Show Devices"
+        android:text="Show Paired Devices"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

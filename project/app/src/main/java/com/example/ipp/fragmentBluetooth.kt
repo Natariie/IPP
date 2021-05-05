@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 
@@ -38,24 +39,23 @@ class fragmentBluetooth : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         container?.removeAllViews()
+
 
         // Returns inflated layout as a constant. This is to make it possible to use findViewById
         val inflateLayout = inflater.inflate(R.layout.fragment_bluetooth, container, false)
-        val REQUEST_CODE_DISCOVERABLE_BT = 3
-
 
         // To use functions in activity helping source was used https://www.tutorialspoint.com/how-to-call-an-activity-method-from-a-fragment-in-android-app-using-kotlin
         val buttonSearchForDevices = inflateLayout.findViewById<Button>(R.id.button_Search)
         buttonSearchForDevices.setOnClickListener {
-            (activity as MainActivity?)!!.discovery()
+            //(activity as MainActivity?)!!.discovery()
         }
 
         val buttonShowDevices = inflateLayout.findViewById<Button>(R.id.button_show_devices)
         buttonShowDevices.setOnClickListener {
-            (activity as MainActivity?)!!.showDevices()
+            (activity as MainActivity).showDevices()
         }
 
         // Inflate the layout for this fragment
