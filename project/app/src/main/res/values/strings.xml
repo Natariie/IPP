@@ -15,12 +15,33 @@
     <string name="button_check_status">Check status</string>
     <string name="button_check_timer">Check timer</string>
     <string name="button_back_to_start">Back to Start</string>
-    <string name="button_settings">Settings</string>
 
     <!-- Bluetooth -->
     <string name="button_show_paired_devices">Show paired devices</string>
     <string name="button_back_to_main_menu">Back to Main Menu</string>
 
+    <!-- Status -->
+    <string name="status">Notification &amp; Bluetooth Status</string>
 
+    <!-- Timer -->
+    <string name="welcome">Welcome</string>
+    <string name="Status">Check status</string>
+    <string name="Connect">Connect to bluetooth</string>
+    <string name="Timer">Check Timer</string>
+    <string name="dateForChange">Scheduled refill date</string>
+    <string name="estimate">The insulin pump is estimated to need a refill in 2 weeks from now </string>
+    <string name="remind1">Remind me to change </string>
+    <string name="remind2">from now</string>
+    <string name="two">2</string>
+    <string name="days">days</string>
+    <string name="one">1</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="hours">hours</string>
+    <string name="weeks">weeks</string>
+    <string name="minutes">minutes</string>
+    <string name="seconds">seconds</string>
+    <string name="OK">OK</string>
+    <string name="save">Save</string>
 
 </resources>

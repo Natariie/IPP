@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        
         bluetooth()
 
         // - - - Click events - - -
@@ -63,6 +63,10 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(currentFragmentId, changeIntoFragment)
         // The addToBacStack should make the user able to go back to the last fragment by pressing the back button. (not working properly atm)
         transaction.addToBackStack(backStack).commit()
+    }
+
+    fun timer() {
+
     }
 
     fun showDevices() {
