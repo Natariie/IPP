@@ -61,9 +61,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun click(fragmentId: Int, fragment: Fragment, backStack: String? = null) {
+    fun click(currentFragmentId: Int, changeIntoFragment: Fragment, backStack: String? = null) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(fragmentId, fragment)
+        transaction.replace(currentFragmentId, changeIntoFragment)
         // The addToBacStack should make the user able to go back to the last fragment by pressing the back button. (not working properly atm)
         transaction.addToBackStack(backStack).commit()
     }

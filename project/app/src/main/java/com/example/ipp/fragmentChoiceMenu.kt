@@ -47,7 +47,7 @@ class FragmentChoiceMenu : Fragment() {
         //val buttonHelp = inflateLayout.findViewById<Button>(R.id.button_help)
 
         buttonConnectToBluetooth.setOnClickListener() {
-            (activity as MainActivity).click(R.id.id_fragment_choice_menu, fragmentBluetooth(),null)
+            (activity as MainActivity).click(R.id.id_fragment_choice_menu, FragmentBluetooth(),null)
             //val transaction = childFragmentManager.beginTransaction()
             //transaction.replace(R.id.id_fragment_choice_menu, fragmentBluetooth())
             //transaction.addToBackStack(null).commit()

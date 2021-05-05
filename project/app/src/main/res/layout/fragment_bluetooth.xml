@@ -4,42 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/choice_menu_background"
     android:id="@+id/id_fragment_bluetooth"
-    tools:context=".fragmentBluetooth">
+    tools:context=".FragmentBluetooth">
 
 
     <ListView
         android:id="@+id/device_list"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_show_devices"
-        tools:ignore="UnknownId" />
-
-    <Button
-        android:id="@+id/button_Search"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Search for Devices"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button_show_devices"></ListView>
 
     <Button
         android:id="@+id/button_show_devices"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Show Paired Devices"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/round_corners_button"
+        android:text="@string/button_show_paired_devices"
+        android:textColor="#14171C"
+        app:backgroundTint="#07BBBB"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Search" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/round_corners_button"
+        android:text="@string/button_back_to_main_menu"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#313844"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
