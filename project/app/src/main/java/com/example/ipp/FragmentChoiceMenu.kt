@@ -37,24 +37,31 @@ class FragmentChoiceMenu : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        container?.removeAllViews();
+        // Makes sure to remove the previous view
+        container?.removeAllViews()
+
         // Returns inflated layout as a constant. This is to make it possible to use findViewById
         val inflateLayout = inflater.inflate(R.layout.fragment_choice_menu, container, false)
         // All the buttons for Choice Menu
         val buttonConnectToBluetooth = inflateLayout.findViewById<Button>(R.id.button_connect_to_bluetooth)
         val buttonStatus = inflateLayout.findViewById<Button>(R.id.button_check_status)
-        //val buttonTimer = inflateLayout.findViewById<Button>(R.id.button_check_timer)
-        //val buttonHelp = inflateLayout.findViewById<Button>(R.id.button_help)
+        val buttonTimer = inflateLayout.findViewById<Button>(R.id.button_check_timer)
+        val buttonBackToStart = inflateLayout.findViewById<Button>(R.id.button_back_to_start)
 
-        buttonConnectToBluetooth.setOnClickListener() {
-            (activity as MainActivity).click(R.id.id_fragment_choice_menu, FragmentBluetooth(),null)
-            //val transaction = childFragmentManager.beginTransaction()
-            //transaction.replace(R.id.id_fragment_choice_menu, fragmentBluetooth())
-            //transaction.addToBackStack(null).commit()
+        buttonConnectToBluetooth.setOnClickListener {
+            (activity as MainActivity).click(R.id.id_fragment_choice_menu, FragmentBluetooth())
         }
 
         buttonStatus.setOnClickListener {
-            Log.d("tagged", "clickStatus")
+            (activity as MainActivity).click(R.id.id_fragment_choice_menu, FragmentStatus())
+        }
+
+        buttonTimer.setOnClickListener {
+            (activity as MainActivity).click(R.id.id_fragment_choice_menu, FragmentTimer())
+        }
+
+        buttonBackToStart.setOnClickListener {
+            (activity as MainActivity).click(R.id.id_fragment_choice_menu, FragmentStartScreen())
         }
 
         // Inflate the layout for this fragment

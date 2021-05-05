@@ -1,10 +1,13 @@
 package com.example.ipp
 
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.annotation.RequiresApi
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,7 +19,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [StartScreenFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class StartScreenFragment : Fragment() {
+class FragmentStartScreen : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -29,9 +32,21 @@ class StartScreenFragment : Fragment() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        // Makes sure to remove the previous view
+        container?.removeAllViews()
+
+        // Returns inflated layout as a constant. This is to make it possible to use findViewById
+        val inflateLayout = inflater.inflate(R.layout.fragment_start_screen, container, false)
+
+        val buttonStart = inflateLayout.findViewById<Button>(R.id.button_start)
+        buttonStart.setOnClickListener {
+            (activity as MainActivity).click(R.id.id_fragment_start_screen, FragmentChoiceMenu())
+        }
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start_screen, container, false)
+        return inflateLayout
     }
 
     companion object {
@@ -46,7 +61,7 @@ class StartScreenFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-                StartScreenFragment().apply {
+            FragmentStartScreen().apply {
                     arguments = Bundle().apply {
                         putString(ARG_PARAM1, param1)
                         putString(ARG_PARAM2, param2)

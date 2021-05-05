@@ -65,18 +65,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_check_status" />
 
-    <Button
-        android:id="@+id/button_help"
+     <Button
+        android:id="@+id/button_back_to_start"
         android:layout_width="288dp"
         android:layout_height="43dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/round_corners_button"
-        android:text="@string/button_help"
+        android:text="@string/button_back_to_start"
         android:textColor="#14171C"
         app:backgroundTint="#07BBBB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_check_timer" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

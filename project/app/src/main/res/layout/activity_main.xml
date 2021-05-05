@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/fragment_start_menu"
-        android:name="com.example.ipp.StartScreenFragment"
+        android:name="com.example.ipp.FragmentStartScreen"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         app:layout_constraintBottom_toBottomOf="parent"
