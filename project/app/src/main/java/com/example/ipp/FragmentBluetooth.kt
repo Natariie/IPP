@@ -41,9 +41,6 @@ class FragmentBluetooth : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Makes sure to remove the previous view
-        container?.removeAllViews()
-
         // Returns inflated layout as a constant. This is to make it possible to use findViewById
         val inflateLayout = inflater.inflate(R.layout.fragment_bluetooth, container, false)
 
@@ -54,7 +51,7 @@ class FragmentBluetooth : Fragment() {
         }
         val buttonBack = inflateLayout.findViewById<Button>(R.id.button_back)
         buttonBack.setOnClickListener {
-            (activity as MainActivity).click(R.id.id_fragment_bluetooth, FragmentChoiceMenu())
+            (activity as MainActivity).click(R.id.fragment, FragmentChoiceMenu())
         }
 
         // Inflate the layout for this fragment

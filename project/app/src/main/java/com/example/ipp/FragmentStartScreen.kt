@@ -34,15 +34,12 @@ class FragmentStartScreen : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Makes sure to remove the previous view
-        container?.removeAllViews()
-
         // Returns inflated layout as a constant. This is to make it possible to use findViewById
         val inflateLayout = inflater.inflate(R.layout.fragment_start_screen, container, false)
 
         val buttonStart = inflateLayout.findViewById<Button>(R.id.button_start)
         buttonStart.setOnClickListener {
-            (activity as MainActivity).click(R.id.id_fragment_start_screen, FragmentChoiceMenu())
+            (activity as MainActivity).click(R.id.fragment, FragmentChoiceMenu())
         }
 
         // Inflate the layout for this fragment

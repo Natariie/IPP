@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/choice_menu_background"
-    android:tag="tag_fragment_choice_menu"
-    android:id="@+id/id_fragment_choice_menu"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentChoiceMenu">
 
@@ -78,6 +76,5 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_check_timer" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
