@@ -32,6 +32,7 @@ class FragmentChoiceMenu : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

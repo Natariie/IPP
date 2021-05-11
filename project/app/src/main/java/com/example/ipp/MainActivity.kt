@@ -1,15 +1,18 @@
 package com.example.ipp
 
 import android.Manifest
+import android.app.AlertDialog
 import android.bluetooth.BluetoothAdapter
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -25,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -34,6 +38,77 @@ class MainActivity : AppCompatActivity() {
         buttonStart = findViewById(R.id.button_start)
         buttonStart.setOnClickListener {
             click(R.id.fragment, FragmentChoiceMenu())
+        }
+
+    }
+
+
+    fun startTimer(key1 : String?, key2 : String?){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Refill")
+        builder.setMessage("This is a reminder that you need to refill your glucose and insulin.")
+
+        when(key1){
+            "1" -> {
+                if (key2 == "seconds") {
+                    val timer = object : CountDownTimer(1000, 1000) {
+                        override fun onTick(millisUntilFinished: Long) {}
+
+                        override fun onFinish() {
+                            builder.setPositiveButton("Got it!") { _, _ ->
+
+                            }
+                            builder.show()
+                        }
+                    }
+                    timer.start()
+                }
+            }
+            "2" -> {
+                if (key2 == "seconds") {
+                    val timer = object : CountDownTimer(2000, 1000) {
+                        override fun onTick(millisUntilFinished: Long) {}
+
+                        override fun onFinish() {
+                            builder.setPositiveButton("Got it!") { _, _ ->
+
+                            }
+                            builder.show()
+                        }
+                    }
+                    timer.start()
+                }
+            }
+            "3" -> {
+                if (key2 == "seconds") {
+                    val timer = object : CountDownTimer(3000, 1000) {
+                        override fun onTick(millisUntilFinished: Long) {}
+
+                        override fun onFinish() {
+                            builder.setPositiveButton("Got it!") { _, _ ->
+
+                            }
+                            builder.show()
+                        }
+                    }
+                    timer.start()
+                }
+            }
+            "4" -> {
+                if (key2 == "seconds") {
+                    val timer = object : CountDownTimer(4000, 1000) {
+                        override fun onTick(millisUntilFinished: Long) {}
+
+                        override fun onFinish() {
+                            builder.setPositiveButton("Got it!") { _, _ ->
+
+                            }
+                            builder.show()
+                        }
+                    }
+                    timer.start()
+                }
+            }
         }
     }
 
