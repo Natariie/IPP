@@ -16,6 +16,8 @@
     <string name="button_check_timer">Check timer</string>
     <string name="button_back_to_start">Back to Start</string>
 
+    <string name="button_help">Help</string>
+
     <!-- Bluetooth -->
     <string name="button_show_paired_devices">Show paired devices</string>
     <string name="button_back_to_main_menu">Back to Main Menu</string>

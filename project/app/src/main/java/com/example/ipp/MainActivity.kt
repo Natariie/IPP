@@ -12,7 +12,6 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -136,10 +135,7 @@ class MainActivity : AppCompatActivity() {
         transaction.addToBackStack(backStack).commit()
     }
 
-    fun timer() {
-
-    }
-
+    // Shows all bonded devices by adding them into a list and then into a listView
     fun showDevices() {
         val devices = bluetoothAdapter?.bondedDevices
         val listView = findViewById<ListView>(R.id.device_list)

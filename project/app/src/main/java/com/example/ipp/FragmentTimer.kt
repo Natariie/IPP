@@ -14,22 +14,9 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.example.ipp.databinding.FragmentTimerBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FragmentTimer.newInstance] factory method to
- * create an instance of this fragment.
- */
 
 class FragmentTimer : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
     //to enable viewbinding in this fragment
     private var fragmentTimerBinding: FragmentTimerBinding? = null
 
@@ -170,10 +157,8 @@ class FragmentTimer : Fragment() {
             false
         }
 
-
         //once appropriate options have been selected, press save
-        binding.saveButton.setOnClickListener(){
-
+        binding.saveButton.setOnClickListener {
             //update the preferences to make sure they're equal to the changes made in the case statement scopes
             val sharedPreferences3: SharedPreferences? = activity?.getSharedPreferences("sharedPrefs", MODE_PRIVATE)                   //när man klickar på save så sparas båda inställningarna
             val savedVal1 = sharedPreferences3?.getString("MENU1_KEY", "1")
@@ -184,36 +169,25 @@ class FragmentTimer : Fragment() {
             binding.setTimerValue2.text = savedVal2
 
             //friendly reminder
-            Toast.makeText(context, "Will send a reminder in: " + savedVal1 + " " + savedVal2, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Will send a reminder in: $savedVal1 $savedVal2", Toast.LENGTH_SHORT).show()
 
             //pass the saved values as argument to startTimer method of MainActivity class
             (activity as MainActivity).startTimer(savedVal1, savedVal2)
-
         }
 
         //this is needed for the menus to actually show up when they're clicked
-        binding.setTimerValue1.setOnClickListener(){
+        binding.setTimerValue1.setOnClickListener{
             popupMenu1.show()
         }
 
-        binding.setTimerValue2.setOnClickListener(){
+        binding.setTimerValue2.setOnClickListener{
             popupMenu2.show()
         }
 
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-
-        super.onCreate(savedInstanceState)
-
-
-    }
-
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
-
-
-
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Returns inflated layout as a constant. This is to make it possible to use findViewById
         val inflateLayout = inflater.inflate(R.layout.fragment_timer, container, false)
